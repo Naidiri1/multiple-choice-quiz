@@ -3,8 +3,6 @@ var questionOnScreenIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-
-
 //sounds for the answer Correct/Wrong 
 var soundCorrect = new Audio("assets/sounds/correct.wav");
 var soundWrong = new Audio("assets/sounds/incorrect.wav");
@@ -85,12 +83,12 @@ function responseOnClick(event) {
         // display new time on page
         timeEl.textContent = time + "seconds left";
 
-        // play "wrong" sound effect
+        // play "wrong" sound effect in wrong answer
         soundWrong.play();
 
         feedbackEl.textContent = "Wrong!, keep trying";
     } else {
-        // play "right" sound effect
+        // play "right" sound effect in right answer
         soundCorrect.play();
 
         feedbackEl.textContent = "Correct! Congrats";
@@ -104,19 +102,58 @@ function responseOnClick(event) {
     //the questions will appear one by one in order with the index i+ 1+
     questionOnScreenIndex++;
     // to know the lenght of the questions of the quiz use conditional
-    if (time <= 0  ||  questionOnScreenIndex === questions.length) {
+    if (time <= 0 || questionOnScreenIndex === questions.length) {
         finishedquiz();
     } else {
         getQuestion();
     }
 }
 // stop timer with a function 
-function finishedquiz() {
+function finishquiz() {
     clearInterval(timerId);
 }
 
- // show end screen
- var endShowingScreen = document.getElementById('end-screen');
- endScreenEl.removeAttribute('class');
+// show end screen
+var endShowingScreen = document.getElementById('end-screen');
+endShowingScreen.removeAttribute("class");
+
+// get scores based on the choices correct
+var finalScoreEl = document.getElementById('final-score');
+finalScoreEl.textContent = time;
+
+// hide questions section
+questionsEl.setAttribute("class", "hide");
+
+function clockTick() {
+    time--;
+    timeEl.textContent = time;
+    if (time <= 0) {
+        finishquiz();
+    }
+
+}
+//get value of input box
+function saveHighscores(){
+var initials= enterInitials.value.trim();
 
 
+
+// make sure value wasn't empty
+if (initials !== '') {
+    // get saved scores from localstorage, or if not any, set to empty array
+    var highscores =
+      JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+    // format new score object for current user
+    var newScore = {
+      score: time,
+      initials: initials,
+    };
+
+
+
+
+
+
+
+}
