@@ -15,14 +15,14 @@ var questions = [
 },
 //Question #3 
 {   
-    tittle: "The function and  var are known as: ",
+    title: "The function and  var are known as: ",
     choices: ["A. Keywords", "B. Data types", "C. Declaration statements", "D. Prototypes"],
     answer: "C.Declaration statements",
 
 },
 //Question #4
 {
-  tittle: "Which of the following variables takes precedence over the others if the names are the same",
+  title: "Which of the following variables takes precedence over the others if the names are the same",
   choices: ["A. Global variable", "B. The local element", "C. The two of the above", "D. None of the above"],
   answer: "B. The local element",
 },
