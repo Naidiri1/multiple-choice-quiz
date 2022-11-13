@@ -29,7 +29,7 @@ function startQuiz() {
     timerId = setInterval(clockTick, 1000);
 
     //show starting timie on screen
-    timeEl.textContent = timer;
+    timeEl.textContent = time;
 
     //called function for the question printed on screen 
     getQuestion();
@@ -103,7 +103,7 @@ function responseOnClick(event) {
     questionOnScreenIndex++;
     // to know the lenght of the questions of the quiz use conditional
     if (time <= 0 || questionOnScreenIndex === questions.length) {
-        finishedquiz();
+        finishquiz();
     } else {
         getQuestion();
     }
@@ -111,7 +111,6 @@ function responseOnClick(event) {
 // stop timer with a function 
 function finishquiz() {
     clearInterval(timerId);
-}
 
 // show end screen
 var endShowingScreen = document.getElementById('end-screen');
@@ -123,7 +122,7 @@ finalScoreEl.textContent = time;
 
 // hide questions section
 questionsEl.setAttribute("class", "hide");
-
+}
 function clockTick() {
     time--;
     timeEl.textContent = time;
@@ -135,8 +134,6 @@ function clockTick() {
 //get value of input box
 function saveHighscores(){
 var initials= enterInitials.value.trim();
-
-
 
 // make sure value wasn't empty
 if (initials !== '') {
@@ -150,10 +147,30 @@ if (initials !== '') {
       initials: initials,
     };
 
+ // save to localstorage
+ highscores.push(newScore);
+ window.localStorage.setItem('highscores', JSON.stringify(highscores));
 
-
-
-
-
+ // redirect to next page
+ window.location.href = 'highscores.html';
 
 }
+}
+function checkForEnter(event) {
+    // "13" represents the enter key
+    if (event.key === 'Enter') {
+      saveHighscores();
+    }
+  }
+  
+  // user clicks button to submit initials
+  submitBtn.onclick = saveHighscores;
+  
+  // user clicks button to start quiz
+  startBtn.onclick = startQuiz;
+  
+  // user clicks on element containing choices
+  choicesEl.onclick = responseOnClick;
+  
+  initialsEl.onkeyup = checkForEnter;
+  
