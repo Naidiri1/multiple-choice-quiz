@@ -3,7 +3,7 @@
 //Question #1 
 var questions = [
 {
-    title: "Which type of JavaScript language is?",
+    title: "Which type of language is JavaScript?",
     choices: ["A. Object-Oriented", "B. Object-Based", "C. Assembly-language", "D. High-level"],
     answer: "B. Object-Based",
 },

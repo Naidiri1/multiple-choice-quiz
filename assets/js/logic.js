@@ -97,7 +97,7 @@ function responseOnClick(event) {
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function () {
         feedbackEl.setAttribute("class", "feedback hide");
-    }, 10);
+    }, 1000);
 
     //the questions will appear one by one in order with the index i+ 1+
     questionOnScreenIndex++;
