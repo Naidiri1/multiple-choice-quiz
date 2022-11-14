@@ -23,9 +23,9 @@ It is composed of a timer, a section of highscores linked to the main quiz once 
 The quiz is composed of five  questions with 4 different multiple choice buttons. it also includes 2 sounds: one for the correct answers and one for the incorrect answers. and prompts a message if the answer is correct/ wrong. Once the user gets the results, he/she can write a name to see in a list the scores made and keep track of the progress made or another option is clear the scores and start new ones.
 
 Evidence of my portfolio with images:
-[Main screen of the multiple choice quiz](./assets/images/main-screen.jpg)
-[Exaple of the first question](./assets/images/question-one.jpg)
-[Results of the multiple choice quiz](./assets/images/results.png)
+![Main screen of the multiple choice quiz](./assets/images/main-screen.jpg)
+![Exaple of the first question](./assets/images/question-one.jpg)
+![Results of the multiple choice quiz](./assets/images/results.png)
 
 - Linked of deployed application:
 
