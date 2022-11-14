@@ -3,21 +3,21 @@
 //Question #1 
 var questions = [
 {
-    title: "Which type of JavaScript language is ___ .",
-    choices: ["A. Object-Oriented", "B. Object-Based", "C. Assembly-language", "D. Assembly-language"],
-    answer: "B. Object-Based "
+    title: "Which type of JavaScript language is?",
+    choices: ["A. Object-Oriented", "B. Object-Based", "C. Assembly-language", "D. High-level"],
+    answer: "B. Object-Based",
 },
 //Question #2 
 {
     title: "Which one of the following is also known as Conditional Expression",
-    choices: ["A. Alternative to if-else", "B. Switch statement", "C. If-then-else statement", "D. immediate if"],
-    answer: "D. immediate if",
+    choices: ["A. Alternative to if-else", "B. Switch statement", "C. If-then-else statement", "D. Immediate if"],
+    answer: "D. Immediate if",
 },
 //Question #3 
 {   
     title: "The function and  var are known as: ",
     choices: ["A. Keywords", "B. Data types", "C. Declaration statements", "D. Prototypes"],
-    answer: "C.Declaration statements",
+    answer: "C. Declaration statements",
 
 },
 //Question #4

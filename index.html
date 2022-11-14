@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz</title>
-
+<!--Adding style to the quiz with externa css file  -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
+    <!--Adding highscores file externally  -->
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
     <div class="timer">Time: <span id="time">0</span></div>
@@ -22,7 +23,7 @@
           limit. Keep in mind that incorrect answers will penalize your
           score/time by 15 seconds!
         </p>
-        <button id="startquiz">Start Quiz</button>
+        <button id="start">Start Quiz</button>
       </div>
 
       <div id="questions" class="hide">
@@ -39,10 +40,15 @@
         </p>
       </div>
 
-      <div id="feedback" class="feedback hide"></div>
+      <div id="feedback" class="feedback hide">
+      </div>
     </div>
-
-    <script src="./assets/js/questions.js"></script>
-    <script src="./assets/js/logic.js"></script>
+    <footer>
+      <p>Copyright© 2022. All Rights Reserved. </p>
+      <!--Adding questions file of js externally -->
+      <script src="./assets/js/questions.js"></script>
+      <!--Adding the functionality of the multiple choice quiz externally on file  -->
+      <script src="./assets/js/logic.js"></script>
+    </footer>
   </body>
 </html>
