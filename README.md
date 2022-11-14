@@ -27,7 +27,7 @@ Evidence of my portfolio with images:
 ![Exaple of the first question](./assets/images/question-one.jpg)
 ![Results of the multiple choice quiz](./assets/images/results.png)
 
-- Linked of deployed application:
+- Linked of deployed application: https://naidiri1.github.io/multiple-question-quiz/ 
 
 # Credits #
 
